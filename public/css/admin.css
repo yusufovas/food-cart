@@ -1,0 +1,8 @@
+.wrapper{
+    background-color: azure;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}

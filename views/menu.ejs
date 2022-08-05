@@ -1,0 +1,62 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge " />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='700' preserveAspectRatio='none' viewBox='0 0 1440 700'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1028%26quot%3b)' fill='none'%3e%3cpath d='M1488 700L0 700 L0 464.29Q41.18 385.47%2c 120 426.64Q146.47 381.11%2c 192 407.58Q245.46 389.04%2c 264 442.51Q330.98 389.49%2c 384 456.46Q414.19 366.64%2c 504 396.83Q547 319.83%2c 624 362.84Q716.42 335.26%2c 744 427.69Q823.77 387.46%2c 864 467.23Q885.99 369.22%2c 984 391.21Q1049.01 336.22%2c 1104 401.23Q1123.14 348.37%2c 1176 367.51Q1229.76 301.27%2c 1296 355.04Q1354.03 341.07%2c 1368 399.1Q1447.88 358.98%2c 1488 438.86z' fill='rgba(114%2c 164%2c 17%2c 1)'%3e%3c/path%3e%3cpath d='M1512 700L0 700 L0 458.38Q98.85 437.23%2c 120 536.07Q172.07 468.14%2c 240 520.22Q267.21 475.43%2c 312 502.64Q388.9 459.54%2c 432 536.44Q433.02 465.46%2c 504 466.48Q569.44 411.92%2c 624 477.36Q695.38 428.74%2c 744 500.11Q758.56 442.67%2c 816 457.23Q843.33 412.56%2c 888 439.88Q967.42 399.31%2c 1008 478.73Q1095.83 446.56%2c 1128 534.39Q1144.28 430.67%2c 1248 446.96Q1289.3 416.25%2c 1320 457.55Q1391.07 408.62%2c 1440 479.69Q1455.91 423.6%2c 1512 439.51z' fill='rgba(114%2c 164%2c 87%2c 1)'%3e%3c/path%3e%3cpath d='M1464 700L0 700 L0 536.96Q58.16 475.12%2c 120 533.28Q196.65 489.93%2c 240 566.58Q334.73 541.31%2c 360 636.04Q414.1 570.14%2c 480 624.24Q486.34 558.58%2c 552 564.91Q580.28 521.19%2c 624 549.48Q684.3 537.78%2c 696 598.08Q700.66 530.75%2c 768 535.41Q834.85 482.25%2c 888 549.1Q993.94 535.04%2c 1008 640.97Q1031.84 544.81%2c 1128 568.64Q1174.74 495.38%2c 1248 542.11Q1306.88 528.99%2c 1320 587.87Q1361.84 557.71%2c 1392 599.56Q1410.29 545.85%2c 1464 564.13z' fill='rgba(114%2c 180%2c 90%2c 1)'%3e%3c/path%3e%3cpath d='M1512 700L0 700 L0 635.88Q59.48 623.36%2c 72 682.84Q123.49 614.33%2c 192 665.82Q211.42 613.25%2c 264 632.67Q292.26 588.93%2c 336 617.19Q437.45 598.64%2c 456 700.1Q471 643.1%2c 528 658.09Q568.84 578.93%2c 648 619.77Q719.26 571.03%2c 768 642.3Q873.77 628.07%2c 888 733.83Q935.71 661.54%2c 1008 709.24Q1052.66 633.9%2c 1128 678.56Q1176.07 606.63%2c 1248 654.69Q1272.32 607.01%2c 1320 631.32Q1377.23 616.55%2c 1392 673.78Q1425.55 587.33%2c 1512 620.87z' fill='rgba(114%2c 224%2c 17%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1028'%3e%3crect width='1440' height='700' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+      }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 75%;
+        float: right;
+        margin-right: 260px;
+        color: black;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <ol id="ol-list" style="list-style: none">
+      <table>
+        <tr>
+          <th>№</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>go</th>
+        </tr>
+        <% newArr.map(el => { %>
+        <li>
+          <tr>
+            <td><%= el.id %></td>
+            <td style="display: flex;align-items: center;">
+              <img src="<%= el.image %> " style="width: 50px; height: 50px;" alt="">
+              <%= el.name %></td>
+            <td><%= el.category %></td>
+            <td><form action="/food" method="get" enctype="application/x-www-form-urlencoded">
+              <button data-id="<%= el.id %>" class="go-btn">go</button>
+            </form></td>
+          </tr>
+        </li>
+        <% }) %>
+      </table>
+    </ol>
+    <script>
+      const list = document.querySelector("#ol-list");
+      list.addEventListener("click", (evt) => {
+        let res_id;
+        evt.target.dataset.id ? (res_id = evt.target.dataset.id) : "";
+        document.cookie = "res_id" + "=" + (res_id || "");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/add_food.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include ('./sidebar.ejs') %>
+    <div class="wrapper">
+      <form
+        action="/addfood"
+        enctype="application/x-www-form-urlencoded"
+        method="post"
+      >
+        <input type="text" value="salad" name="name" />
+        <select name="food_type" class="select" onchange="getSelectValue()">
+          <option value="none" disabled selected class="option">
+            choose category
+          </option>
+          <option value="milliy">milliy</option>
+          <option value="fastfood">fast food</option>
+        </select>
+        <input type="hidden" class="type" name="category" value="fastfood" />
+        <input type="text" value="10000" name="price" />
+        <input type="text" value="2" name="restaurant_id" />
+        <input type="text" name="image" placeholder="img url"/>
+        <button type="submit" class="btn">Create</button>
+      </form>
+      <ol id="ol-list" style="list-style: none;">
+        <table>
+          <tr>
+            <th>№</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Restaurant Id</th>
+            <th>delete</th>
+          </tr>
+          <% allFood.map(el => { %>
+            <li>
+              <tr>
+                <td><%= el.id %> </td>
+                <td style="display: flex; align-items: center">
+                  <img
+                    src="<%= el.image %> "
+                    style="width: 50px; height: 50px"
+                    alt=""
+                  />
+                  <%= el.name %>
+                </td>
+                <td><%= el.category %> </td>
+                <td><%= el.price %> </td>
+                <td><%= el.restaurant_id %> </td>
+                <td><button data-id="<%= el.name %>" class="delete-btn">delete</button></td></tr>
+            </li>
+            <% }) %>
+        </table>
+      </ol>
+    </div>
+    <script src="../public/js/add_food.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name": "mike",
+        "contact": "124545",
+        "adress": "345 Main Road",
+        "food": [
+            {
+                "food": "Chicken",
+                "res_id": "3",
+                "count": "3"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "mike",
+        "contact": "124545",
+        "adress": "345 Main Road",
+        "food": [
+            {
+                "food": "Chicken",
+                "res_id": "3",
+                "count": "3"
+            }
+        ]
+    }
+]

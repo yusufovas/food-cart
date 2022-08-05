@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 75%;
+          float: right;
+          margin-right: 50px;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+<body>
+    <%- include ('./sidebar.ejs') %> 
+    <table>
+        <tr>
+          <th>№</th>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Adress</th>
+          <th>Food</th>
+          <th>Count</th>
+          <th>Restaurant Id</th>
+        </tr>
+        <% orders.forEach(el => { %>
+        <tr>
+            <td><%= el.id %> </td>
+            <td><%= el.name %> </td>
+            <td><%= el.contact %> </td>
+            <td><%= el.adress %> </td>
+            <% for( let item of el.food ) { %>
+                <td><%= item.food %> </td>
+                <td><%= item.count %> </td>
+                <td><%= item.res_id %> </td>
+            <% } %>
+        </tr>
+          <% }) %>
+    </table>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../public/fonts/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/nivo-lightbox/nivo-lightbox.css"/>
+    <link rel="stylesheet" type="text/css" href="../public/css/nivo-lightbox/default.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600," rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="../public/css/modal.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="portfolio">
+      <div class="section-title text-center center">
+        <div class="overlay">
+          <h2 id="title"></h2>
+          <hr />
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed.</p>
+        </div>
+      </div>
+      <div class="container">
+        <ol id="ol-list">
+          <% newArr.map(el => { %>
+          <li>
+            <div class="col-sm-6 col-md-4 col-lg-4 breakfast">
+              <div class="portfolio-item">
+                <div class="hover-bg">
+                  <div class="hover-text">
+                    <h4><%= el.name %></h4>
+                    <h4><%= el.price %></h4>
+                  </div>
+                  <img src="<%= el.image %> " class="img-responsive" alt="Project Title" style="width: 350px; height: 230px;"/>
+                </div>
+              </div>
+              <button data-id="<%= el.name %> <%= el.price %> " data-name="<%= el.name%> " data-img="<%= el.image %> ">add to cart </button>
+            </div>
+          </li>
+          <% }) %>
+        </ol>
+        <button id="myBtn" style="background-color: white;"><img src="../public/img/shopping-cart.png" alt=""></button>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Make an order</p>
+            <form class="form">
+              <input type="text" placeholder="name" name="name" class="name_inp"/>
+              <input type="text" placeholder="contact" name="contact" class="contact_inp"/>
+              <input type="text" placeholder="adress" name="adress" class="adress_inp"/>
+              <input type="text" placeholder="count"  name="count" class="count_inp"/>
+              <button type="submit">order</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../public//js/modal.js"></script>
+  </body>
+</html>
