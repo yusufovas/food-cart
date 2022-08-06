@@ -3,24 +3,24 @@
         "id": 1,
         "name": "Rayhon",
         "category": "milliy",
-        "image": "http://localhost:8080/public/img/res_img/rayhon.png"
+        "image": "http://localhost:6060/public/img/res_img/rayhon.png"
     },
     {
         "id": 2,
         "name": "Yalpiz",
         "category": "milliy",
-        "image": "http://localhost:8080/public/img/res_img/yalpiz.png"
+        "image": "http://localhost:6060/public/img/res_img/yalpiz.png"
     },
     {
         "id": 3,
         "name": "Kfc",
         "category": "fastfood",
-        "image": "http://localhost:8080/public/img/res_img/kfc.png"
+        "image": "http://localhost:6060/public/img/res_img/kfc.png"
     },
     {
         "id": 4,
         "name": "Shosh",
         "category": "milliy",
-        "image": "http://localhost:8080/public/img/res_img/Shosh.png"
+        "image": "http://localhost:6060/public/img/res_img/Shosh.png"
     }
 ]

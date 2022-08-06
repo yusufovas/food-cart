@@ -36,7 +36,7 @@ module.exports = {
     
             food.push(new_food)
     
-            fs.writeFileSync(path.join(process.cwd(), 'model', 'food.json'), JSON.stringify(food, null, 4))
+            fs.writeFileSync(path.join(process.cwd(), 'src','model', 'food.json'), JSON.stringify(food, null, 4))
     
             res.redirect('/dashboard')
         } else {
@@ -48,7 +48,7 @@ module.exports = {
 
         const all_food = food.filter(item => item.name !== res_id)
         if (all_food) {
-            fs.writeFileSync(path.join(process.cwd(), 'model', 'food.json'), JSON.stringify(all_food, null, 4))
+            fs.writeFileSync(path.join(process.cwd(), 'src','model', 'food.json'), JSON.stringify(all_food, null, 4))
             res.redirect('/dashboard')
         } else {
             res.redirect('/login')

@@ -5,9 +5,8 @@ const count_inp = document.querySelector('.count_inp')
 const form = document.querySelector('.form')
 
 const title = document.querySelector('#title')
-const value = document.cookie.split('=')[1]
-const new_value = value.split(';')[0]
-// console.log(new_value);
+const value = document.cookie.split(';')
+const new_value = value[1].split('=')[1]
 if (new_value === 'milliy') {
     title.innerHTML = 'Milliy food menu'
 }
@@ -16,8 +15,28 @@ if (new_value === 'fastfood') {
     title.innerHTML = 'fast food menu'
 }
 
-const list = document.querySelector("#ol-list");
+const list = document.querySelector("#list");
 list.addEventListener("click", (evt) => {
+    form.addEventListener('submit', evt => {
+        let data = {
+            name: name_inp.value,
+            contact: contact_inp.value,
+            adress: adress_inp.value,
+            food: p.innerHTML.split(' ')[0],
+            count: count_inp.value
+        };
+    
+        fetch(`http://localhost:6060/orders`, {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).then(res => {
+            res.json()
+        }).then(data => {
+            console.log(data);
+        })
+    
+    })
     const p = document.createElement("p");
     const image = document.createElement("img");
     const img = evt.target.dataset.img
@@ -39,26 +58,6 @@ list.addEventListener("click", (evt) => {
     modalContent.append(image)
     modalContent.append(p);
 
-    form.addEventListener('submit', evt => {
-        let data = {
-            name: name_inp.value,
-            contact: contact_inp.value,
-            adress: adress_inp.value,
-            food: p.innerHTML.split(' ')[0],
-            count: count_inp.value
-        };
-        
-        fetch("http://localhost:8080/orders", {
-            method: "POST",
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        }).then(res => {
-            res.json()
-        }).then(data => {
-            console.log(data);
-        })
-    
-    })
 });
 
 

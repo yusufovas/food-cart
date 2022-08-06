@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../public/css/add_food.css" />
+    <link rel="stylesheet" href="/public/css/add_food.css" />
     <title>Document</title>
   </head>
   <body>
@@ -14,7 +14,7 @@
         enctype="application/x-www-form-urlencoded"
         method="post"
       >
-        <input type="text" value="salad" name="name" />
+        <input type="text" placeholder="food name" name="name" />
         <select name="food_type" class="select" onchange="getSelectValue()">
           <option value="none" disabled selected class="option">
             choose category
@@ -23,12 +23,12 @@
           <option value="fastfood">fast food</option>
         </select>
         <input type="hidden" class="type" name="category" value="fastfood" />
-        <input type="text" value="10000" name="price" />
-        <input type="text" value="2" name="restaurant_id" />
+        <input type="text" name="price" placeholder="price"/>
+        <input type="text"  name="restaurant_id" placeholder="restaurant id"/>
         <input type="text" name="image" placeholder="img url"/>
         <button type="submit" class="btn">Create</button>
       </form>
-      <ol id="ol-list" style="list-style: none;">
+      <ol id="list" style="list-style: none;">
         <table>
           <tr>
             <th>№</th>
@@ -59,6 +59,6 @@
         </table>
       </ol>
     </div>
-    <script src="../public/js/add_food.js"></script>
+    <script src="/public/js/add_food.js"></script>
   </body>
 </html>

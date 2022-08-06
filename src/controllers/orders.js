@@ -28,7 +28,7 @@ module.exports = {
 
             orders.push(new_order)
 
-            fs.writeFileSync(path.join('.', 'model', 'orders.json'), JSON.stringify(orders, null, 4))
+            fs.writeFileSync(path.join(process.cwd(), 'src', 'model', 'orders.json'), JSON.stringify(orders, null, 4))
             res.redirect('/')
         } else  {
             res.json('cannot send free field!')

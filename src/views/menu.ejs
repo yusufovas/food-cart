@@ -26,7 +26,7 @@
     </style>
   </head>
   <body>
-    <ol id="ol-list" style="list-style: none">
+    <ol id="list" style="list-style: none">
       <table>
         <tr>
           <th>№</th>
@@ -38,20 +38,24 @@
         <li>
           <tr>
             <td><%= el.id %></td>
-            <td style="display: flex;align-items: center;">
-              <img src="<%= el.image %> " style="width: 50px; height: 50px;" alt="">
-              <%= el.name %></td>
+            <td style="display: flex; align-items: center">
+              <img src="<%= el.image %> " style="width: 50px; height: 50px" alt=""/>
+              <%= el.name %>
+            </td>
             <td><%= el.category %></td>
-            <td><form action="/food" method="get" enctype="application/x-www-form-urlencoded">
-              <button data-id="<%= el.id %>" class="go-btn">go</button>
-            </form></td>
+            <td>
+              <form action="/food" method="get" enctype="application/x-www-form-urlencoded" >
+                <button data-id="<%= el.id %>" class="go-btn">go</button>
+              </form>
+            </td>
           </tr>
         </li>
         <% }) %>
       </table>
     </ol>
+
     <script>
-      const list = document.querySelector("#ol-list");
+      const list = document.querySelector("#list");
       list.addEventListener("click", (evt) => {
         let res_id;
         evt.target.dataset.id ? (res_id = evt.target.dataset.id) : "";

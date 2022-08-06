@@ -1,3 +1,4 @@
+
 function getSelectValue() {
   var selectedValue = document.querySelector(".select").value;
   let type = document.querySelector(".type");
@@ -5,18 +6,18 @@ function getSelectValue() {
 }
 getSelectValue();
 
-const list = document.querySelector('#ol-list');
+const list = document.querySelector('#list');
 
 list.addEventListener("click", (evt) => {
   let res_id;
   evt.target.dataset.id ? res_id = evt.target.dataset.id : '';
   console.log(res_id);
-  fetch("http://localhost:8080/deleteres", {
-      method: "DELETE",
-      headers: {
-          "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ res_id }),
+  fetch(`http://localhost:6060/deleteres`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ res_id }),
   })
 
   alert('restaurant deleted! Refresh the page to see changes')

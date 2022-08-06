@@ -3,7 +3,7 @@
         "id": 1,
         "name": "osh",
         "price": "10000",
-        "image": "http://localhost:8080/public/img/food-img/osh.jpg",
+        "image": "http://localhost:6060/public/img/food-img/osh.jpg",
         "category": "milliy",
         "restaurant_id": 2
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "name": "manti",
         "price": "70000",
-        "image": "http://localhost:8080/public/img/food-img/manti.jpg",
+        "image": "http://localhost:6060/public/img/food-img/manti.jpg",
         "category": "milliy",
         "restaurant_id": 2
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "name": "honim",
         "price": "70000",
-        "image": "http://localhost:8080/public/img/food-img/honim.jpg",
+        "image": "http://localhost:6060/public/img/food-img/honim.jpg",
         "category": "milliy",
         "restaurant_id": 2
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "name": "norin",
         "price": "50000",
-        "image": "http://localhost:8080/public/img/food-img/norin.jpg",
+        "image": "http://localhost:6060/public/img/food-img/norin.jpg",
         "category": "milliy",
         "restaurant_id": 1
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "name": "chuchvara",
         "price": "30000",
-        "image": "http://localhost:8080/public/img/food-img/chuchvara.jpeg",
+        "image": "http://localhost:6060/public/img/food-img/chuchvara.jpeg",
         "category": "milliy",
         "restaurant_id": 1
     },
@@ -43,7 +43,7 @@
         "id": 6,
         "name": "mastava",
         "price": "15000",
-        "image": "http://localhost:8080/public/img/food-img/mastava.jpeg",
+        "image": "http://localhost:6060/public/img/food-img/mastava.jpeg",
         "category": "milliy",
         "restaurant_id": 1
     },
@@ -51,7 +51,7 @@
         "id": 7,
         "name": "Chicken",
         "price": "20000",
-        "image": "http://localhost:8080/public/img/food-img/chicken.jpeg",
+        "image": "http://localhost:6060/public/img/food-img/chicken.jpeg",
         "category": "fastfood",
         "restaurant_id": 3
     },
@@ -59,7 +59,7 @@
         "id": 8,
         "name": "Longer",
         "price": "25000",
-        "image": "http://localhost:8080/public/img/food-img/longer.webp",
+        "image": "http://localhost:6060/public/img/food-img/longer.webp",
         "category": "fastfood",
         "restaurant_id": 3
     },
@@ -67,7 +67,7 @@
         "id": 9,
         "name": "Nuggets",
         "price": "14000",
-        "image": "http://localhost:8080/public/img/food-img/nuggets.webp",
+        "image": "http://localhost:6060/public/img/food-img/nuggets.webp",
         "category": "fastfood",
         "restaurant_id": 3
     },
@@ -75,7 +75,7 @@
         "id": 10,
         "name": "dimlama",
         "price": "20000",
-        "image": "http://localhost:8080/public/img/food-img/dimlama.webp",
+        "image": "http://localhost:6060/public/img/food-img/dimlama.webp",
         "category": "milliy",
         "restaurant_id": 4
     },
@@ -83,7 +83,7 @@
         "id": 11,
         "name": "non",
         "price": "4000",
-        "image": "http://localhost:8080/public/img/food-img/bread.jpg",
+        "image": "http://localhost:6060/public/img/food-img/bread.jpg",
         "category": "milliy",
         "restaurant_id": 4
     },
@@ -91,7 +91,7 @@
         "id": 12,
         "name": "shorva",
         "price": "30000",
-        "image": "http://localhost:8080/public/img/food-img/shorva.jpg",
+        "image": "http://localhost:6060/public/img/food-img/shorva.jpg",
         "category": "milliy",
         "restaurant_id": 4
     }
